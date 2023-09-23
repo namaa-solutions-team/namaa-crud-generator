@@ -15,7 +15,7 @@ class CrudGeneratorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->registerProviders();
     }
 
     /**
