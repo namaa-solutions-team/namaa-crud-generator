@@ -12,13 +12,13 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Namaa\\CrudGenerator\\NamaaServiceProvider"
+        "NamaaSolutions\\CrudGenerator\\NamaaServiceProvider"
       ]
     }
   },
   "autoload": {
     "psr-4": {
-      "Namaa\\CrudGenerator\\": "src/"
+      "NamaaSolutions\\CrudGenerator\\": "src/"
     }
   }
 }
