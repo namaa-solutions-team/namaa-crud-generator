@@ -3,9 +3,9 @@
 namespace NamaaSolutions\CrudGenerator\Commands;
 
 use Illuminate\Support\Str;
-use Nwidart\Modules\Support\Config\GenerateConfigReader;
-use Nwidart\Modules\Support\Stub;
-use Nwidart\Modules\Traits\ModuleCommandTrait;
+use NamaaSolutions\CrudGenerator\Support\Config\GenerateConfigReader;
+use NamaaSolutions\CrudGenerator\Support\Stub;
+use NamaaSolutions\CrudGenerator\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
