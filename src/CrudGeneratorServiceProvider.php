@@ -1,6 +1,6 @@
 <?php
 
-namespace Namaa\Namaa;
+namespace NamaaSolutions\CrudGenerator;
 
 use Illuminate\Support\ServiceProvider;
 
