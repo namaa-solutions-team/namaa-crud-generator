@@ -12,7 +12,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "NamaaSolutions\\CrudGenerator\\NamaaServiceProvider"
+        "NamaaSolutions\\CrudGenerator\\CrudGeneratorServiceProvider"
       ]
     }
   },
