@@ -3,7 +3,7 @@
 namespace NamaaSolutions\CrudGenerator;
 
 use Illuminate\Support\ServiceProvider;
-use Nwidart\Modules\Providers\ConsoleServiceProvider;
+use NamaaSolutions\CrudGenerator\Providers\ConsoleServiceProvider;
 
 class CrudGeneratorServiceProvider extends ServiceProvider
 {
