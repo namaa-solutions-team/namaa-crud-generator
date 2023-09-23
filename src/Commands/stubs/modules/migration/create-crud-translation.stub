@@ -1,0 +1,48 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('$TABLE$', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+            $table->bigInteger('uuid')->unsigned();
+            $table->tinyInteger('active')->default(1)->index();
+            $table->bigInteger('created_by')->unsigned()->index()->nullable();
+            $FIELDS$
+        });
+
+          Schema::create('$NAME$_translations', function (Blueprint $table) {
+            $table->increments('id');
+            $table->bigInteger('$NAME$_id')->unsigned()->index('$NAME$_tr_$NAME$_id_index');
+            $table->string('locale')->index();
+            $table->string('name');
+            $table->unique(['$NAME$_id', 'locale'],'$NAME$_id_locale_unique');
+               $table->foreign('$NAME$_id', '$NAME$_translations_id_foreign')
+                ->references('id')
+                ->on('$TABLE$')
+                ->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('$TABLE$');
+        Schema::dropIfExists('$NAME$_translations');
+    }
+};

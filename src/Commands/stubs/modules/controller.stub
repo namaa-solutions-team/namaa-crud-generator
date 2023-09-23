@@ -1,0 +1,17 @@
+<?php
+
+namespace $CLASS_NAMESPACE$;
+
+
+use App\Http\Controllers\CrudController;
+use $MODULE_NAMESPACE$\$MODULE$\Entities\$MODEL$;
+use $MODULE_NAMESPACE$\$MODULE$\Http\Requests\$MODEL$Request;
+
+class $CLASS$ extends CrudController
+{
+    protected $request = $MODEL$Request::class;
+
+    protected $name = '$MODEL_SNAKE$';
+
+    protected $modelClass = $MODEL$::class;
+}

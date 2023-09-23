@@ -1,0 +1,14 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use App\Models\Base\Model;
+
+class $CLASS$ extends Model
+{
+    public $timestamps = false;
+
+    protected $fillable = [
+        'name',
+    ];
+}

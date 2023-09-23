@@ -1,0 +1,24 @@
+{
+  "name": "namaa/crud-generator",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Feras-alhallak",
+      "email": "f.alhallak@namaa-solutions.com"
+    }
+  ],
+  "require": {},
+  "minimum-stability": "dev",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Namaa\\CrudGenerator\\NamaaServiceProvider"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Namaa\\CrudGenerator\\": "src/"
+    }
+  }
+}
