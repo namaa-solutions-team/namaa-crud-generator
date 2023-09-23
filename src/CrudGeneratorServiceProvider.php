@@ -3,6 +3,7 @@
 namespace NamaaSolutions\CrudGenerator;
 
 use Illuminate\Support\ServiceProvider;
+use Nwidart\Modules\Providers\ConsoleServiceProvider;
 
 class CrudGeneratorServiceProvider extends ServiceProvider
 {
@@ -25,5 +26,13 @@ class CrudGeneratorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+    }
+
+    /**
+     * Register providers.
+     */
+    protected function registerProviders()
+    {
+        $this->app->register(ConsoleServiceProvider::class);
     }
 }
