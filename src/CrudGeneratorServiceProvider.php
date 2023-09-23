@@ -16,6 +16,7 @@ class CrudGeneratorServiceProvider extends ServiceProvider
     public function register()
     {
         $this->registerProviders();
+        $this->registerNamespaces();
     }
 
     /**
@@ -34,5 +35,22 @@ class CrudGeneratorServiceProvider extends ServiceProvider
     protected function registerProviders()
     {
         $this->app->register(ConsoleServiceProvider::class);
+    }
+
+    /**
+     * Register package's namespaces.
+     */
+    protected function registerNamespaces()
+    {
+        $configPath = __DIR__ . '/../config/config.php';
+        // $stubsPath = dirname(__DIR__) . '/src/Commands/stubs';
+
+        $this->publishes([
+            $configPath => config_path('namaa-crud.php'),
+        ], 'config');
+
+        // $this->publishes([
+        //     $stubsPath => base_path('stubs/namaa-stubs'),
+        // ], 'stubs');
     }
 }
