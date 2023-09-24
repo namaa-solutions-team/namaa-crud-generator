@@ -26,8 +26,6 @@ class CrudController extends Controller
 
     protected $modelClass;
 
-    protected $hasApprovalCycle;
-
     protected $hasPermissions = true;
 
 
@@ -40,8 +38,6 @@ class CrudController extends Controller
 
         if ($this->hasPermissions)
             $this->__crudMiddlewareConstruct();
-
-        $this->hasApprovalCycle();
     }
 
     public function index(Request $request)
@@ -72,9 +68,7 @@ class CrudController extends Controller
             ->findOrFail($id);
 
         return $this->SuccessResponse([
-            'item_info' => $modelResult->getModelShowInfo(),
             'item' => $modelResult,
-            'item_approval_cycle' => $this->hasApprovalCycle ? $modelResult->getModelApprovalCycleInfo() : []
         ]);
     }
 
@@ -143,15 +137,6 @@ class CrudController extends Controller
         }
 
         return $this->SuccessResponse(['id' => $id], 0, Messages::DELETE_SUCCESS);
-    }
-
-    /**
-     * The hook is executed to check if this controller has ApproveControllerTrait trait or not .
-     *
-     */
-    protected function hasApprovalCycle()
-    {
-        $this->hasApprovalCycle = in_array('Modules\EApproval\Traits\ApproveControllerTrait', class_uses($this));
     }
 
 
