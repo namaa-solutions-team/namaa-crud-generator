@@ -3,12 +3,11 @@
 namespace $NAMESPACE$;
 
 use App\Models\Base\Model;
-use App\Traits\NumbaingTrait;
 use App\Traits\HasCreatedBy;
 
 class $CLASS$ extends Model
 {
-    use NumbaingTrait, HasCreatedBy;
+    use HasCreatedBy;
 
     protected $fillable = ['active'];
 

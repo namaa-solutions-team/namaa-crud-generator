@@ -13,6 +13,8 @@ class ConsoleServiceProvider extends ServiceProvider
      */
     protected $commands = [
         Commands\ModelMakeCrudCommand::class,
+        Commands\MigrationMakeCrudCommand::class,
+        Commands\ControllerMakeCommand::class,
     ];
 
     public function register(): void

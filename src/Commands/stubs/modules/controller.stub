@@ -3,7 +3,7 @@
 namespace $CLASS_NAMESPACE$;
 
 
-use App\Http\Controllers\CrudController;
+use NamaaSolutions\CrudGenerator\Controllers\CrudController;
 use $MODULE_NAMESPACE$\$MODULE$\Entities\$MODEL$;
 use $MODULE_NAMESPACE$\$MODULE$\Http\Requests\$MODEL$Request;
 
