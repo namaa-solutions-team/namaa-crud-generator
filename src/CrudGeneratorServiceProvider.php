@@ -46,7 +46,7 @@ class CrudGeneratorServiceProvider extends ServiceProvider
         // $stubsPath = dirname(__DIR__) . '/src/Commands/stubs';
 
         $this->publishes([
-            $configPath => config_path('namaa-crud.php'),
+            $configPath => config_path('crud-generator.php'),
         ], 'config');
 
         // $this->publishes([
