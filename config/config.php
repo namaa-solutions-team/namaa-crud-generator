@@ -11,6 +11,8 @@ return [
     */
     'commands' => [
         Commands\ModelMakeCrudCommand::class,
+        Commands\MigrationMakeCrudCommand::class,
+        Commands\ControllerMakeCommand::class,
     ],
 
 ];
